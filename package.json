@@ -1,0 +1,29 @@
+{
+	"name": "professional-website",
+	"type": "module",
+	"version": "0.1.0",
+	"private": true,
+	"engines": {
+		"node": ">=22.12.0"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"check": "astro check",
+		"test": "vitest run --passWithNoTests",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
+	},
+	"dependencies": {
+		"astro": "~6.4.8"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.12",
+		"@types/node": "^22.20.5",
+		"prettier": "^3.10.1",
+		"prettier-plugin-astro": "^1.1.2",
+		"typescript": "^6.0.3",
+		"vitest": "^5.1.1"
+	}
+}

@@ -1,0 +1,9 @@
+dist/
+.astro/
+node_modules/
+package-lock.json
+# The plan is hand-edited prose; keep its formatting as written
+docs/
+# Copied verbatim from plan section 19.2
+CLAUDE.md
+AGENTS.md
