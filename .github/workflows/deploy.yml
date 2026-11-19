@@ -2,7 +2,8 @@ name: Build and deploy
 
 on:
   push:
-    branches: [main]
+    # Work package branches run the checks without deploying
+    branches: [main, "wp*"]
   pull_request:
   workflow_dispatch:
 
@@ -34,7 +35,7 @@ jobs:
       - run: npm run build
       # Playwright smoke tests against the built preview are added once tests exist (WP12).
       - uses: actions/upload-pages-artifact@v4
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         with:
           path: dist
 
